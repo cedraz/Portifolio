@@ -1,0 +1,30 @@
+.button__container {
+  display: flex;
+}
+
+.button {
+  padding: 0 30px;
+  min-width: 140px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--text-color);
+  font-size: var(--small-text);
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  display: flex;
+  
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: var(--secondary);
+}
+
+.button__icon {
+  font-size: 1.4rem;
+}
