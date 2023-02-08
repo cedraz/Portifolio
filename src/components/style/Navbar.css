@@ -39,7 +39,6 @@
 }
 
 .navbar-list {
-  background-color: var(--container-background);
   display: flex;
   flex-direction: row;
   justify-content: center;
