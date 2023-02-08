@@ -13,6 +13,7 @@
 .about__subtitle {
   display: block;
   text-align: center;
+  font-size: var(--small-text);
 }
 
 .about__image {
@@ -46,14 +47,8 @@
   font-size: var(--normal-text);
 }
 
-.about__subtitle {
-  font-size: var(--small-text);
-  color: hsl(0, 0%, 46%);
-}
-
 .about__description {
   font-size: var(--medium-text);
-  color: hsl(0, 0%, 46%);
   text-align: justify;
 }
 

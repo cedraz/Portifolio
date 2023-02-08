@@ -12,7 +12,7 @@
 
 .project__item {
   cursor: pointer;
-  color: hsl(0, 0%, 20%);
+  color: var(--primary-darker);
   padding: 0.25rem 0.75rem;
   font-weight: var(--medium-weight);
   border-radius: 0.5rem;
@@ -21,7 +21,7 @@
 
 .active__project {
   cursor: pointer;
-  background-color: hsl(0, 0%, 20%);
+  background-color: var(--primary-darker);
   color: var(--container-background);
   padding: 0.25rem 0.75rem;
   font-weight: var(--medium-weight);
@@ -30,11 +30,13 @@
 }
 
 .project__item:hover {
-  background-color: hsl(0, 0%, 20%);
+  background-color: var(--primary-darker);
   color: var(--container-background);
 }
 
 .projects__container {
+  
+  grid-template-columns: var(--n-columns);
   display: grid;
   justify-content: center;
   gap: 2rem;
@@ -65,7 +67,7 @@
 }
 
 .project__button {
-  color: hsl(0, 0%, 46%);
+  color: var(--text);
   font-size: var(--small-text);
   display: flex;
   align-items: center;
@@ -79,4 +81,10 @@
 
 .project__button:hover .project__button-icon {
   transform: translate(0.25rem);
+}
+
+@media screen and (max-width: 960px) {
+  .projects__container {
+    grid-template-columns: repeat(1, max-content);
+  }
 }

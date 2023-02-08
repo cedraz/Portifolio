@@ -1,16 +1,20 @@
 :root {
   font-family: 'Poppins', sans-serif;
 
+  --n-columns: repeat(2, max-content);
+
+  /* ------------- Light Mode Settings ------------- */
+
   --primary: #4d4d4d;
-  --primary-darker: #252425;
+  --primary-darker: #333333;
+  --title-color: 	#252425;
+  --text: #757575;
+  --body-background: #fafafa;
+  --container-background: #f3f3f3;
+  --subtitle-color: #565656;
+
   --secondary: #FF6584;
 
-  --title-color: #000000;
-
-  --text-color: hsl(0, 0%, 46%);
-
-  --white: #fff;
-  
   --normal-text: 1.35rem;
   --small-text: 0.95rem;
   --medium-text: 1.1rem;
@@ -19,7 +23,16 @@
   --normal-weight: 400;
   --medium-weight: 500;
 
-  --container-background: #f3f3f3;
+  /* ------------- Dark Mode Settings ------------- */
+
+  --dark-primary: #fafafa;
+  /* #f3f3f3 */
+  --dark-primary-darker: #f3f3f3;
+  --dark-text: #cacaca;
+  --dark-body-background: #363940;
+  --dark-container-background: #40454b;
+  --dark-subtitle-color: #d7d7d7;
+
 }
 
 html {
@@ -33,9 +46,10 @@ html {
 }
 
 body {
-  background-color: hsl(0, 0%, 98%);
-  color: var(--primary);
+  background-color: var(--body-background);
+  color: var(--text);
   min-width: 400px;
+  transition: .4s;
 }
 
 a {
@@ -43,11 +57,12 @@ a {
 }
 
 h1, h2, h3 {
-  color: hsl(0, 0%, 20%);
+  color: var(--title-color);
 }
 
 .title {
   font-size: var(--large-text);
+  color: var(--title-color);
 }
 
 .subtitle {
@@ -55,7 +70,7 @@ h1, h2, h3 {
   font-weight: var(--normal-weight);
   font-size: var(--small-text);
   margin-bottom: 4rem;
-  color: hsl(0, 0%, 46%);
+  color: var(--subtitle-color);
 }
 
 .title, .subtitle {
@@ -63,7 +78,7 @@ h1, h2, h3 {
 }
 
 .description {
-  color: hsl(0, 0%, 46%);
+  color: var(--text);
 }
 
 .section {

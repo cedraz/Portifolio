@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './style/Navbar.css'
+import ToggleSwitch from './ToggleSwitch';
+import ChangeToDarkMode from './ChangeDarkMode';
 
 function Navbar() {
   window.addEventListener("scroll", () => {
@@ -14,6 +16,20 @@ function Navbar() {
 
   const [click, setClick] = useState(false);
   const handleClickMobile = () => setClick(!click);
+  
+  const [toggle, setToggle] = useState(true);
+  const [toggleText, setToggleText] = useState('Dark Mode');
+
+  const handleClickToggle = () => {
+    setToggle(!toggle);
+    ChangeToDarkMode(toggle);
+    if (toggle) {
+      setToggleText('Light Mode')
+    } else {
+      setToggleText('Dark Mode')
+    }
+  }
+
 
   return (
     <>
@@ -38,6 +54,12 @@ function Navbar() {
               </li>
               <li >
                 <a href="#portfolio" className='navbar-item'>Projects</a>
+              </li>
+              <li>
+                <div className="dark-mode-toggle navbar-item">
+                  <p className='dakr-mode-item'>{toggleText}</p>
+                  <ToggleSwitch func={handleClickToggle} />
+                </div>
               </li>
             </ul>
           </div>

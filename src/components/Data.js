@@ -9,7 +9,7 @@ export const projectsData = [
     id: 1,
     image: project1,
     title: 'Delicias da Ana',
-    category: 'design',
+    category: 'web',
     link: 'https://github.com/cedraz/Delicias-da-ana',
   },
   {
@@ -51,8 +51,5 @@ export const projectsNav = [
   },
   {
     name: 'app',
-  },
-  {
-    name: 'design',
   },
 ]

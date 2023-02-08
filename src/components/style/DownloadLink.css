@@ -10,6 +10,7 @@
   border: 2px solid var(--primary-darker);
   color: var(--primary-darker);
   font-size: 1.05rem;
+  font-weight: var(--medium-weight);
   border-radius: 10px;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
@@ -21,7 +22,7 @@
 }
 
 .link:hover {
-  color: var(--text-color);
+  color: var(--body-background);
   background-color: var(--primary-darker);
 }
 

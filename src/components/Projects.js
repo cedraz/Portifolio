@@ -8,6 +8,7 @@ const Portfolio = () => {
   const [item, setItem] = useState({name: 'all'});
   const [projects, setProjects] = useState([]);
   const [active, setActive] = useState(0);
+  const [columns, setColumns] = useState(2);
 
   useEffect(() => {
     if (item.name === 'all') {
@@ -21,9 +22,14 @@ const Portfolio = () => {
     }
   }, [item]);
 
+  useEffect(() => {
+    setColumns(oddOrEven(projects.length));
+    document.body.style.setProperty('--n-columns', `repeat(${columns}, max-content)`);
+  }, [projects, columns])
+
   const handleClick = (e, index) => {
     setItem({name: e.target.textContent});
-    setActive(index)
+    setActive(index);
   };
 
   function oddOrEven(n) {
@@ -44,15 +50,13 @@ const Portfolio = () => {
           {projectsNav.map((item, index) => {
             return (
               <span onClick={(e) => {
-                handleClick(e, index)
+                handleClick(e, index);
               }} className={active === index ? 'active__project' : 'project__item'} key={index}>{item.name}</span>
             )
           })}
         </div>
 
-        <div className="projects__container container" style={
-          {'grid-template-columns': `repeat(${oddOrEven(projects.length)}, max-content)`,}
-        } >
+        <div className="projects__container container">
           {projects.map((item) => {
             return <Card item={item} key={item.id} href={item.link} />
           })}

@@ -13,7 +13,7 @@ function Home() {
                 Ícaro Cedraz
                 <i class="uil uil-smile-beam"></i>
               </h1>
-              <h3 className='home__subtitle'>
+              <h3 className='home__subtitle subtitle'>
                 Web Developer
               </h3>
               <p className='home__description description'>
