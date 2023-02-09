@@ -18,12 +18,12 @@ function Navbar() {
   const handleClickMobile = () => setClick(!click);
   
   const [toggle, setToggle] = useState(true);
-  const [toggleText, setToggleText] = useState('Dark Mode');
+  const [toggleText, setToggleText] = useState('Light Mode');
 
   const handleClickToggle = () => {
     setToggle(!toggle);
     ChangeToDarkMode(toggle);
-    if (toggle) {
+    if (!toggle) {
       setToggleText('Light Mode')
     } else {
       setToggleText('Dark Mode')
