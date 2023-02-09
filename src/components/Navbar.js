@@ -57,6 +57,7 @@ function Navbar() {
               </li>
               <li>
                 <div className="dark-mode-toggle navbar-item">
+                  <i className={toggleText === 'Light Mode' ? 'toggle-icon uil uil-sun' : 'toggle-icon uil uil-moon'} ></i>
                   <p className='dakr-mode-item'>{toggleText}</p>
                   <ToggleSwitch func={handleClickToggle} />
                 </div>

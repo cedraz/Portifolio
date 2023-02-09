@@ -69,6 +69,10 @@
   color: var(--primary-darker);
 }
 
+.toggle-icon {
+  margin-right: 5px;
+}
+
 .mobile {
   display: none;
 }
